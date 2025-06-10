@@ -1,0 +1,100 @@
+/* 実際の画像ファイルを使用 */
+
+/* ヒーロー画像 */
+.hero-image {
+    background-image: url('./fv_1 1.png');
+}
+
+/* アバター画像 */
+.avatar-a {
+    background-image: url('./voice_a 1.png');
+}
+
+.avatar-b {
+    background-image: url('./voice_b 1.png');
+}
+
+/* サロン画像 */
+.salon-image-1 {
+    background-image: url('./S__1630244 1.jpg');
+}
+
+.salon-image-2 {
+    background-image: url('./S__1630262 1.jpg');
+}
+
+.salon-image-3 {
+    background-image: url('./S__1630268 1.jpg');
+}
+
+.salon-image-4 {
+    background-image: url('./S__1630267 1.jpg');
+}
+
+.salon-image-5 {
+    background-image: url('./S__1630248 1.jpg');
+}
+
+/* 実績画像 */
+.point-image-1 {
+    background-image: url('./S__1630254 1.jpg');
+}
+
+.point-image-2 {
+    background-image: url('./S__1630249 1.jpg');
+}
+
+.point-image-3 {
+    background-image: url('./Photo_25-06-02-15-59-46.023 2.jpg');
+}
+
+/* アイコンスタイル */
+.question-mark-icon {
+    position: relative;
+    display: inline-block;
+    width: 49.497px;
+    height: 49.497px;
+    background-color: #c4b095;
+    transform: rotate(45deg);
+}
+
+.question-mark-icon::before {
+    content: '？';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+/* レスポンシブ対応で画像をサイズ調整 */
+@media (max-width: 768px) {
+    .salon-image {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    
+    .salon-image-1 {
+        width: 300px !important;
+        height: 300px !important;
+    }
+    
+    .point-image {
+        width: 250px !important;
+        height: 150px !important;
+    }
+    
+    .avatar-circle {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    .avatar-image {
+        width: 69px !important;
+        height: 60px !important;
+    }
+} 
