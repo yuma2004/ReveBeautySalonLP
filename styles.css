@@ -6,8 +6,8 @@
 }
 
 :root {
-    --animation-duration: 1s;
-    --animation-delay: 0.2s;
+    --animation-duration: 0.6s;
+    --animation-delay: 0.1s;
     --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
     --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -93,11 +93,20 @@ body {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -183,6 +192,15 @@ body {
     }
 }
 
+@keyframes expandDivider {
+    from {
+        width: 0;
+    }
+    to {
+        width: 28vw;
+    }
+}
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0px);
@@ -194,31 +212,35 @@ body {
 
 /* アニメーションクラス */
 .animate-in {
-    animation: fadeInUp var(--animation-duration) var(--ease-out-expo) forwards;
+    animation: fadeIn var(--animation-duration) var(--ease-out-expo) forwards;
 }
 
 .animate-slide-in-left {
-    animation: slideInLeft 0.8s var(--ease-out-expo) forwards;
+    animation: slideInLeft 0.6s var(--ease-out-expo) forwards;
 }
 
 .animate-slide-in-right {
-    animation: slideInRight 0.8s var(--ease-out-expo) forwards;
+    animation: slideInRight 0.6s var(--ease-out-expo) forwards;
 }
 
 .animate-zoom-in {
-    animation: zoomIn 1s var(--ease-out-back) forwards;
+    animation: zoomIn 0.6s var(--ease-out-expo) forwards;
 }
 
 .animate-fade-in-up {
-    animation: fadeInUp 0.8s var(--ease-out-expo) forwards;
+    animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
 }
 
 .animate-bounce-in {
-    animation: bounceIn 1.2s var(--ease-out-back) forwards;
+    animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
 }
 
 .animate-expand {
-    animation: expandWidth 0.8s var(--ease-out-expo) forwards;
+    animation: expandWidth 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-expand-divider {
+    animation: expandDivider 0.6s var(--ease-out-expo) forwards;
 }
 
 /* ホバーエフェクト */
@@ -260,7 +282,6 @@ body {
 .faq-section,
 .final-cta-section {
     opacity: 0;
-    transform: translateY(30px);
 }
 
 /* CTAボタンは個別に処理するため除外 */
@@ -357,7 +378,7 @@ body.loaded .hero-cta-button {
 .hero-divider-1 {
     top: 16vh;
     left: 26vw;
-    width: 34vw;
+    width: 28vw;
 }
 
 .hero-title-line2 {
@@ -376,7 +397,7 @@ body.loaded .hero-cta-button {
 .hero-divider-2 {
     top: 26vh;
     left: 26vw;
-    width: 34vw;
+    width: 28vw;
 }
 
 .hero-main-title {
@@ -440,6 +461,7 @@ body.loaded .hero-cta-button {
     position: relative;
     width: 100%;
     background-color: #ffffff;
+    margin-top: -1px;
 }
 
 .content-background {
@@ -932,8 +954,9 @@ body.loaded .hero-cta-button {
 }
 
 .point-image {
-    width: clamp(200px, 27.1vw, 380px);
-    height: clamp(125px, 16.8vh, 235px);
+    width: 100%;
+    max-width: 420px;
+    height: clamp(200px, 26vh, 380px);
     background: linear-gradient(135deg, #EEE, #DDD);
     background-size: cover;
     background-position: center;
@@ -1253,6 +1276,25 @@ body.loaded .hero-cta-button {
 
 /* デスクトップ最適化 */
 @media (min-width: 1024px) {
+    /* 実績セクションの交互配置を確実に適用 */
+    .achievement-point {
+        display: flex !important;
+        align-items: center !important;
+        text-align: left !important;
+    }
+    
+    .achievement-point.left-image {
+        flex-direction: row !important;
+    }
+    
+    .achievement-point.right-image {
+        flex-direction: row !important;
+    }
+    
+    .achievement-point.right-image .point-content {
+        text-align: left !important;
+    }
+    
     .final-cta-section {
         height: clamp(600px, 70vh, 900px);
         padding: 0 5vw;
@@ -1378,13 +1420,17 @@ body.loaded .hero-cta-button {
     }
     
     .achievement-point {
-        flex-direction: column;
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .achievement-point.right-image .point-content {
         text-align: center;
     }
     
     .point-image {
         width: 100%;
-        max-width: 300px;
+        max-width: 420px;
     }
 }
 
@@ -1392,10 +1438,55 @@ body.loaded .hero-cta-button {
 @keyframes ctaFadeIn {
     from {
         opacity: 0;
-        transform: translate(-50%, 30px);
+        transform: translate(-50%, 0);
     }
     to {
         opacity: 1;
         transform: translate(-50%, 0);
+    }
+}
+
+/* 準備中表示（デスクトップ以外） */
+.mobile-coming-soon {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon-content {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.coming-soon-content h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.coming-soon-content p {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* デスクトップ以外では準備中画面を表示 */
+@media (max-width: 1023px) {
+    .mobile-coming-soon {
+        display: flex;
+    }
+    
+    .main-container {
+        display: none;
     }
 } 

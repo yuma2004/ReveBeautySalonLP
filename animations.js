@@ -24,25 +24,25 @@ class AnimationManager {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-in');
                     
-                    // 特定の要素に対して遅延アニメーションを適用
+                    // 特定の要素に対して遅延アニメーションを適用（落ち着いた感じに調整）
                     if (entry.target.classList.contains('feature-item')) {
                         const index = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-                        entry.target.style.animationDelay = `${index * 0.2}s`;
+                        entry.target.style.animationDelay = `${index * 0.1}s`;
                     }
                     
                     if (entry.target.classList.contains('review-item')) {
                         const index = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-                        entry.target.style.animationDelay = `${index * 0.3}s`;
+                        entry.target.style.animationDelay = `${index * 0.15}s`;
                     }
                     
                     if (entry.target.classList.contains('achievement-point')) {
                         const index = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-                        entry.target.style.animationDelay = `${index * 0.4}s`;
+                        entry.target.style.animationDelay = `${index * 0.2}s`;
                     }
                     
                     if (entry.target.classList.contains('faq-item')) {
                         const index = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-                        entry.target.style.animationDelay = `${index * 0.15}s`;
+                        entry.target.style.animationDelay = `${index * 0.1}s`;
                     }
                 }
             });
@@ -88,12 +88,12 @@ class AnimationManager {
                         element.style.transform = `translateY(${yPos}px)`;
                     });
                     
-                    // ヒーローセクションのパララックス効果
-                    const heroImage = document.querySelector('.hero-image');
-                    if (heroImage) {
-                        const yPos = scrolled * 0.3;
-                        heroImage.style.transform = `translateY(${yPos}px)`;
-                    }
+                    // ヒーローセクションのパララックス効果（無効化）
+                    // const heroImage = document.querySelector('.hero-image');
+                    // if (heroImage) {
+                    //     const yPos = scrolled * 0.3;
+                    //     heroImage.style.transform = `translateY(${yPos}px)`;
+                    // }
                     
                     ticking = false;
                 });
@@ -110,34 +110,34 @@ class AnimationManager {
         window.addEventListener('load', () => {
             document.body.classList.add('loaded');
             
-            // ヒーローセクションの段階的アニメーション
+            // ヒーローセクションの段階的アニメーション（落ち着いた感じに調整）
             setTimeout(() => {
-                document.querySelector('.hero-title-line1')?.classList.add('animate-slide-in-left');
-            }, 300);
+                document.querySelector('.hero-title-line1')?.classList.add('animate-fade-in-up');
+            }, 200);
             
             setTimeout(() => {
-                document.querySelector('.hero-divider-1')?.classList.add('animate-expand');
+                document.querySelector('.hero-divider-1')?.classList.add('animate-expand-divider');
+            }, 400);
+            
+            setTimeout(() => {
+                document.querySelector('.hero-title-line2')?.classList.add('animate-fade-in-up');
             }, 600);
             
             setTimeout(() => {
-                document.querySelector('.hero-title-line2')?.classList.add('animate-slide-in-left');
-            }, 900);
+                document.querySelector('.hero-divider-2')?.classList.add('animate-expand-divider');
+            }, 800);
             
             setTimeout(() => {
-                document.querySelector('.hero-divider-2')?.classList.add('animate-expand');
-            }, 1200);
-            
-            setTimeout(() => {
-                document.querySelector('.hero-main-title')?.classList.add('animate-zoom-in');
-            }, 1500);
+                document.querySelector('.hero-main-title')?.classList.add('animate-fade-in-up');
+            }, 1000);
             
             setTimeout(() => {
                 document.querySelector('.hero-description')?.classList.add('animate-fade-in-up');
-            }, 1800);
+            }, 1200);
             
             setTimeout(() => {
-                document.querySelector('.hero-cta-button')?.classList.add('animate-bounce-in');
-            }, 2100);
+                document.querySelector('.hero-cta-button')?.classList.add('animate-fade-in-up');
+            }, 1400);
         });
     }
     
@@ -186,7 +186,9 @@ class AnimationManager {
         const heroBackground = document.querySelector('.hero-background');
         // const contentBackground = document.querySelector('.content-background');
         
-        if (heroBackground) heroBackground.classList.add('parallax');
+        /* parallax クラスを付与するとスクロール時に背景が transform され、
+           ヒーローセクションと次セクションの間に余白が生じるため無効化 */
+        // if (heroBackground) heroBackground.classList.add('parallax');
         // コンテンツ全体の背景は固定するためパララックスを適用しない
         // if (contentBackground) contentBackground.classList.add('parallax');
     }

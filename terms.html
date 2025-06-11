@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特定商取引法に基づく表記 - Rêve Beauty Salon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 特商法ページ専用のスタイル */
+        .terms-container {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 80px 5vw 60px;
+        }
+        
+        .terms-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Noto Serif JP', serif;
+        }
+        
+        .terms-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 600;
+            color: #c4b095;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        
+        .terms-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #333333;
+        }
+        
+        .terms-section:last-child {
+            border-bottom: none;
+        }
+        
+        .terms-section h2 {
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 600;
+            color: #c4b095;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .terms-section p, .terms-section li {
+            font-size: clamp(16px, 1.8vw, 20px);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .terms-section ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .terms-section li {
+            margin-bottom: 10px;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(91deg, #DCC090 5.33%, #99855E 98.96%);
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+        
+        .back-link:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0px 6px 15px rgba(196, 176, 149, 0.4);
+        }
+        
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .terms-container {
+                padding: 60px 3vw 40px;
+            }
+            
+            .terms-section {
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+            }
+        }
+        
+        /* デスクトップ以外では準備中画面を表示 */
+        @media (max-width: 1023px) {
+            .mobile-coming-soon {
+                display: flex;
+            }
+            
+            .terms-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 準備中表示（デスクトップ以外） -->
+    <div class="mobile-coming-soon">
+        <div class="coming-soon-content">
+            <h1>準備中です</h1>
+            <p>モバイルでのご利用はお待ちください</p>
+        </div>
+    </div>
+    
+    <div class="terms-container">
+        <div class="terms-content">
+            <h1 class="terms-title">特定商取引法に基づく表記</h1>
+            
+            <div class="terms-section">
+                <h2>販売業者</h2>
+                <p>Reve beauty salon</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>運営責任者</h2>
+                <p>星越雅人</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>所在地</h2>
+                <p>〒542-0081<br>
+                大阪府大阪市中央区南船場3-3-29 長堀多田ビル2階</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>電話番号</h2>
+                <p>080-1995-4121<br>
+                ※営業電話防止のため、施術中は電話に出られない場合がございます。お問い合わせはメールをご利用ください。</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>メールアドレス</h2>
+                <p>reve2025.0401@gmail.com</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>販売価格</h2>
+                <p>各サービスページに税込価格を記載しております。</p>
+                <ul>
+                    <li>ヒゲ脱毛　¥15,500（税込）</li>
+                    <li>全身脱毛（VIO込み）　¥49,500（税込）</li>
+                </ul>
+            </div>
+            
+            <div class="terms-section">
+                <h2>商品以外の必要料金</h2>
+                <ul>
+                    <li>消費税（価格は税込表示）</li>
+                    <li>決済方法により発生する手数料（例：銀行振込手数料等）</li>
+                    <li>当日キャンセルに対するキャンセル料</li>
+                </ul>
+            </div>
+            
+            <div class="terms-section">
+                <h2>支払方法</h2>
+                <p>クレジットカード（Visa、Mastercard、JCB他）／電子マネー（交通系IC、iD など）／QRコード決済（PayPay）</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>支払時期</h2>
+                <p>施術当日にお支払い（都度払い）</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>サービスの提供時期</h2>
+                <p>予約確定後、指定の日時に施術を提供いたします。</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>キャンセル・返金について</h2>
+                <ul>
+                    <li>ご予約のキャンセルは前日までにご連絡ください。</li>
+                    <li>当日のキャンセルは施術料金の<strong>100％</strong>をキャンセル料として頂戴いたします。</li>
+                    <li>無断キャンセルの場合も同様の扱いとなります。</li>
+                    <li>施術サービスの性質上、施術提供後の返金には応じかねます。</li>
+                </ul>
+            </div>
+            
+            <div class="terms-section">
+                <h2>中途解約について</h2>
+                <p>当サロンではコース契約や回数券の販売を行っておらず、都度払い制のため、中途解約やクーリングオフの対象外となります。</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>資格・許可証等</h2>
+                <ul>
+                    <li>美容ライト脱毛機使用においては、医療行為に該当しない範囲で安全基準を満たした機器を使用しています。</li>
+                    <li>必要に応じて、取得済みの美容関連資格・講習修了証などを店頭にて開示可能です。</li>
+                </ul>
+            </div>
+            
+            <div class="back-to-home">
+                <a href="index.html" class="back-link">ページに戻る</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

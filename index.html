@@ -12,11 +12,19 @@
     <script src="animations.js" defer></script>
 </head>
 <body>
+    <!-- 準備中表示（デスクトップ以外） -->
+    <div class="mobile-coming-soon">
+        <div class="coming-soon-content">
+            <h1>準備中です</h1>
+            <p>モバイルでのご利用はお待ちください</p>
+        </div>
+    </div>
+    
     <div class="main-container" data-name="全体B">
         <!-- ヒーローセクション -->
         <section class="hero-section">
             <div class="hero-background"></div>
-            <div class="image.png"></div>
+            <div class="hero-image"></div>
             <div class="hero-gradient-overlay"></div>
             
             <div class="hero-content">
@@ -204,7 +212,7 @@
                 </h2>
                 
                 <div class="achievement-points">
-                    <div class="achievement-point">
+                    <div class="achievement-point left-image">
                         <div class="point-image point-image-1"></div>
                         <div class="point-content">
                             <h3 class="point-title">完全紹介制</h3>
@@ -212,15 +220,15 @@
                         </div>
                     </div>
                     
-                    <div class="achievement-point">
-                        <div class="point-image point-image-2"></div>
+                    <div class="achievement-point right-image">
                         <div class="point-content">
                             <h3 class="point-title">高品質な施術と<br>リラックスできる空間</h3>
                             <p class="point-description">お客様同士のオフ会など、居心地の良さも重視</p>
                         </div>
+                        <div class="point-image point-image-2"></div>
                     </div>
                     
-                    <div class="achievement-point">
+                    <div class="achievement-point left-image">
                         <div class="point-image point-image-3"></div>
                         <div class="point-content">
                             <h3 class="point-title">美と健康を支える<br>サードプレイス</h3>
@@ -366,7 +374,7 @@
                 
                 <div class="footer-bottom">
                     <div class="footer-legal">
-                        <a href="#">特定商取引法表記</a>
+                        <a href="terms.html">特定商取引法表記</a>
                         <span class="footer-divider">|</span>
                         <a href="#">プライバシーポリシー</a>
                         <span class="footer-divider">|</span>
