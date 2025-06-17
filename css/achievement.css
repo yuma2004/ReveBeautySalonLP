@@ -116,3 +116,83 @@
 .reviews-title-line-bottom {
     margin-top: 1.5vh;
 }
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .achievement-section {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+    
+    .achievement-title {
+        font-size: clamp(24px, 6vw, 32px);
+        letter-spacing: 1px;
+        max-width: 100%;
+    }
+    
+    .achievement-title-line-top,
+    .achievement-title-line-bottom {
+        width: 80vw;
+        height: 2px;
+    }
+    
+    .achievement-title-line-top {
+        margin-bottom: 20px;
+    }
+    
+    .achievement-title-line-bottom {
+        margin-top: 20px;
+    }
+    
+    .achievement-description-line-top,
+    .achievement-description-line-bottom {
+        width: 70vw;
+        height: 2px;
+    }
+    
+    .achievement-description-line-top {
+        margin: 15px auto 10px;
+    }
+    
+    .achievement-description-line-bottom {
+        margin: 10px auto 0;
+    }
+    
+    .achievement-description {
+        width: 100%;
+        font-size: clamp(14px, 4vw, 18px);
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+    }
+    
+    .achievement-image {
+        width: 100%;
+        height: 200px;
+        margin: 30px auto;
+    }
+    
+    .video-placeholder-text {
+        font-size: clamp(14px, 4vw, 18px);
+    }
+    
+    .reviews-title {
+        margin: 30px auto 20px;
+        font-size: clamp(14px, 4vw, 18px);
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+    }
+    
+    .reviews-title-line-top,
+    .reviews-title-line-bottom {
+        width: 75vw;
+        height: 2px;
+    }
+    
+    .reviews-title-line-top {
+        margin-bottom: 15px;
+    }
+    
+    .reviews-title-line-bottom {
+        margin-top: 15px;
+    }
+}

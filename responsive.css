@@ -344,3 +344,90 @@
         gap: 15px;
     }
 }
+
+/* ======================================
+   モバイル対応（768px以下）
+   ====================================== */
+@media (max-width: 768px) {
+    /* 準備中表示を完全に無効化 */
+    .mobile-coming-soon {
+        display: none !important;
+    }
+    
+    /* 基本レイアウト */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .main-container {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* 文字サイズの調整 */
+    :root {
+        --font-size-hero-main: clamp(32px, 8vw, 48px);
+        --font-size-hero-title: clamp(16px, 4vw, 20px);
+        --font-size-hero-description: clamp(14px, 3.5vw, 18px);
+        --font-size-section-title: clamp(24px, 6vw, 32px);
+        --font-size-button: clamp(16px, 4vw, 20px);
+        --font-size-button-small: clamp(14px, 3.5vw, 18px);
+    }
+    
+    /* 実績セクションの縦並び */
+    .achievement-point {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .achievement-point.left-image,
+    .achievement-point.right-image {
+        flex-direction: column !important;
+    }
+    
+    .achievement-point .point-content {
+        text-align: center !important;
+    }
+      /* スクロール改善 */
+    .hero-section {
+        min-height: 760px;
+        max-height: 760px;
+        height: 760px;
+    }
+    
+    /* タッチ操作の改善 */
+    .cta-button,
+    .hero-cta-button,
+    .final-cta-button {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+}
+
+/* タブレット対応（769px〜1024px） */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-title-line1,
+    .hero-title-line2 {
+        left: 15vw;
+    }
+    
+    .hero-divider-1,
+    .hero-divider-2 {
+        left: 18vw;
+        width: 35vw;
+    }
+    
+    .hero-main-title {
+        left: 15vw;
+    }
+    
+    .hero-description {
+        left: 15vw;
+    }
+    
+    .hero-cta-button {
+        left: 15vw;
+        width: 70vw;
+    }
+}

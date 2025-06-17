@@ -27,3 +27,21 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+
+/* モバイル対応の強制表示 */
+@media (max-width: 768px) {
+    .mobile-coming-soon {
+        display: none !important;
+    }
+    
+    .main-container {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    body {
+        display: block !important;
+        visibility: visible !important;
+    }
+}

@@ -134,3 +134,132 @@
     box-shadow: var(--box-shadow-button);
     cursor: pointer;
 }
+
+/* モバイル対応 */
+@media (max-width: 768px) {    .hero-section {
+        height: 760px;
+        min-height: 760px;
+        max-height: 760px;
+        display: flex;
+        flex-direction: row;
+    }    /* 画像を右下に小さく配置 */
+    .hero-image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 30%;
+        height: 55%;
+        background-image: url('../img/fv_1%201.png');
+        background-size: cover;
+        background-position: center top;
+        z-index: 2;
+    }    /* 左側のテキストエリア - 左右余白なし */
+    .hero-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 40px 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    /* コンテンツの上部グループ */
+    .hero-content > * {
+        flex-shrink: 0;
+    }
+    
+    /* CTAボタンを底部に配置するためのラッパー */
+    .hero-content::after {
+        content: '';
+        flex-grow: 1;
+    }
+    
+    /* タイトル行1 */
+    .hero-title-line1 {
+        position: static;
+        font-size: clamp(12px, 3vw, 14px);
+        letter-spacing: 0.5px;
+        color: var(--color-primary);
+        margin-bottom: 8px;
+        text-align: left;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    /* 区切り線1 */
+    .hero-divider-1 {
+        position: static;
+        width: 80%;
+        height: 1px;
+        background: var(--gradient-divider);
+        margin-bottom: 15px;
+    }
+    
+    /* タイトル行2 */
+    .hero-title-line2 {
+        position: static;
+        font-size: clamp(12px, 3vw, 14px);
+        letter-spacing: 0.5px;
+        color: var(--color-primary);
+        margin-bottom: 8px;
+        text-align: left;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    /* 区切り線2 */
+    .hero-divider-2 {
+        position: static;
+        width: 80%;
+        height: 1px;
+        background: var(--gradient-divider);
+        margin-bottom: 20px;
+    }
+    
+    /* メインタイトル */
+    .hero-main-title {
+        position: static;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    
+    .hero-main-title-line1,
+    .hero-main-title-line2 {
+        font-size: clamp(24px, 6vw, 32px);
+        letter-spacing: -0.5px;
+        color: var(--color-white);
+        display: block;
+        line-height: 1.1;
+        margin-bottom: 2px;
+    }
+    
+    .hero-main-title-line2 {
+        margin-left: 0;
+        margin-top: 0;
+    }
+      /* 説明文 */
+    .hero-description {
+        position: static;
+        font-size: clamp(10px, 2.5vw, 12px);
+        line-height: 1.4;
+        color: var(--color-white);
+        text-align: left;
+        white-space: normal;
+        margin-bottom: 30px;
+        width: 100%;
+    }    /* CTAボタン */
+    .hero-cta-button {
+        position: static !important;
+        width: 200px !important;
+        height: 50px !important;
+        margin: 20px 0 0 0 !important;
+        align-self: flex-start !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+    }
+}

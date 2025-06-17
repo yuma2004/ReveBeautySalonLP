@@ -88,3 +88,56 @@
     height: 1px;
     background-color: var(--color-primary);
 }
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .faq-section {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+    
+    .faq-title {
+        margin: 0 auto 30px;
+        font-size: clamp(20px, 5vw, 24px);
+    }
+    
+    .faq-item {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        margin: 0 auto 30px;
+        padding: 20px;
+    }
+    
+    .faq-question-mark {
+        top: 20px;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .faq-question {
+        top: 20px;
+        left: 65px;
+        right: 20px;
+        font-size: clamp(14px, 4vw, 16px);
+        white-space: normal;
+        line-height: 1.4;
+    }
+    
+    .faq-divider {
+        top: 60px;
+        left: 30px;
+        right: 30px;
+    }
+    
+    .faq-answer {
+        top: 75px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        font-size: clamp(12px, 3.5vw, 14px);
+        line-height: 1.5;
+    }
+}

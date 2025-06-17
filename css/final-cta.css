@@ -86,3 +86,43 @@
     text-align: center;
     line-height: 1.2;
 }
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .final-cta-section {
+        margin-top: 50px;
+        height: 400px;
+        padding: 40px 20px;
+    }
+    
+    .salon-images {
+        background-size: cover;
+    }
+    
+    .final-cta-content {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .final-cta-title {
+        font-size: clamp(20px, 6vw, 28px);
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+    
+    .final-cta-description {
+        font-size: clamp(14px, 4vw, 18px);
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+    
+    .final-cta-button {
+        width: 90vw;
+        height: 60px;
+        margin: 20px auto 0;
+    }
+    
+    .final-cta-button .button-text {
+        font-size: clamp(14px, 4vw, 18px);
+    }
+}

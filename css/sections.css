@@ -70,3 +70,40 @@
     letter-spacing: 4.8px;
     line-height: 44px;
 }
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .main-content {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .catchphrase-section {
+        padding: 30px 20px;
+    }
+    
+    .catchphrase-title {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .gradient-text {
+        font-size: clamp(24px, 6vw, 32px);
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+    
+    .gradient-text-small {
+        font-size: clamp(18px, 5vw, 24px);
+        letter-spacing: 1px;
+    }
+    
+    .catchphrase-subtitle {
+        width: 100%;
+        height: auto;
+        font-size: clamp(20px, 5vw, 28px);
+        letter-spacing: 1px;
+        line-height: 1.5;
+        margin-top: 20px;
+    }
+}

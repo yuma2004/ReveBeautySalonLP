@@ -6,6 +6,9 @@
 /* 基本スタイル */
 @import 'css/base.css';
 
+/* モバイル対応（最優先で読み込み） */
+@import 'css/mobile.css';
+
 /* コンポーネント */
 @import 'css/components.css';
 
@@ -38,9 +41,6 @@
 
 /* フッター */
 @import 'css/footer.css';
-
-/* モバイル対応 */
-@import 'css/mobile.css';
 
 /* レスポンシブ */
 @import 'responsive.css';
