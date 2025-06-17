@@ -1,0 +1,90 @@
+/* よくあるご質問 */
+.faq-section {
+    position: relative;
+    z-index: var(--z-index-hero-content);
+    margin-top: 8.6vh;
+    padding: 0 5vw;
+    text-align: center;
+}
+
+.faq-title {
+    position: relative;
+    margin: 0 auto 3.6vh;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-button);
+    color: var(--color-white);
+    line-height: 1.2;
+}
+
+.faq-items {
+    margin-top: 0;
+}
+
+.faq-item {
+    position: relative;
+    width: min(760px, 90vw);
+    height: clamp(160px, 18vh, 250px);
+    margin: 0 auto 3.6vh;
+    background-color: var(--color-white);
+}
+
+.faq-item:nth-child(2) {
+    border: 1px solid #bfa46f;
+}
+
+.faq-question-mark {
+    position: absolute;
+    top: clamp(25px, 3.5vh, 45px);
+    left: clamp(25px, 3.5vw, 45px);
+    width: clamp(30px, 3vw, 45px);
+    height: clamp(30px, 3vw, 45px);
+    background-color: var(--color-primary);
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(12px, 1.4vw, 20px);
+    color: var(--color-white);
+}
+
+.faq-question-mark::before {
+    content: '？';
+    transform: rotate(-45deg);
+}
+
+.faq-question {
+    position: absolute;
+    top: clamp(25px, 3.5vh, 45px);
+    left: clamp(75px, 8.5vw, 115px);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(14px, 1.7vw, 24px);
+    color: var(--color-black);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.faq-answer {
+    position: absolute;
+    top: clamp(80px, 10vh, 110px);
+    left: clamp(25px, 3.5vw, 45px);
+    right: clamp(25px, 3.5vw, 45px);
+    bottom: clamp(25px, 3.5vh, 45px);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(12px, 1.7vw, 24px);
+    color: var(--color-black);
+    line-height: 1.4;
+}
+
+.faq-divider {
+    position: absolute;
+    top: clamp(65px, 8vh, 90px);
+    left: clamp(35px, 4vw, 55px);
+    right: clamp(35px, 4vw, 55px);
+    height: 1px;
+    background-color: var(--color-primary);
+}

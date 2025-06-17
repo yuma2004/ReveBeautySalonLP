@@ -1,0 +1,72 @@
+/* 実績詳細セクション */
+.achievement-details {
+    position: relative;
+    z-index: var(--z-index-hero-content);
+    margin-top: 5.7vh;
+    padding: 0 5vw;
+    text-align: center;
+}
+
+.achievement-details-title {
+    position: relative;
+    margin: 0 auto;
+    width: auto;
+    max-width: 90vw;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-section-title);
+    background: linear-gradient(91deg, #DCC090 5.33%, #99855E 98.96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: clamp(2px, 0.3vw, 4.8px);
+    line-height: 1.4;
+}
+
+.achievement-points {
+    margin-top: 3.6vh;
+}
+
+.achievement-point {
+    position: relative;
+    margin: 0 auto 5.7vh;
+    max-width: min(1000px, 90vw);
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 2.9vw, 40px);
+}
+
+.point-image {
+    width: 100%;
+    max-width: 420px;
+    height: clamp(200px, 26vh, 380px);
+    background: linear-gradient(135deg, var(--color-light-gray), var(--color-gray));
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius-sm);
+    flex-shrink: 0;
+}
+
+.point-content {
+    flex: 1;
+}
+
+.point-title {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(16px, 1.7vw, 24px);
+    color: var(--color-primary);
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: clamp(10px, 1.4vh, 20px);
+}
+
+.point-description {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(14px, 1.4vw, 20px);
+    color: var(--color-white);
+    line-height: 1.4;
+    text-align: left;
+}

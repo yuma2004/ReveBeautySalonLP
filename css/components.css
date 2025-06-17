@@ -1,0 +1,48 @@
+/* プリローダー */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-hero);
+    z-index: var(--z-index-preloader);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-content {
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(196, 176, 149, 0.3);
+    border-top: 3px solid var(--color-primary);
+    border-radius: var(--border-radius-full);
+    margin: 0 auto 20px;
+}
+
+.loading-text {
+    font-size: var(--font-size-loading);
+    letter-spacing: 2px;
+}
+
+/* カスタムカーソル */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-full);
+    pointer-events: none;
+    z-index: var(--z-index-cursor);
+    opacity: 0.7;
+}
+
+.custom-cursor.clicking {
+    background-color: rgba(196, 176, 149, 0.3);
+}

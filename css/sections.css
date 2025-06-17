@@ -1,0 +1,72 @@
+/* メインコンテンツ */
+.main-content {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-white);
+    margin-top: -1px;
+}
+
+.content-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark);
+}
+
+/* キャッチコピーセクション */
+.catchphrase-section {
+    position: relative;
+    z-index: var(--z-index-hero-content);
+    padding: 4vh 5vw;
+    text-align: center;
+}
+
+.catchphrase-title {
+    position: relative;
+    margin: 0 auto;
+    width: auto;
+    max-width: 90vw;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: clamp(2px, 0.3vw, 4.8px);
+}
+
+.gradient-text {
+    font-size: var(--font-size-section-title);
+    background: linear-gradient(91deg, #DCC090 5.33%, #99855E 98.96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: clamp(2px, 0.3vw, 4.8px);
+    line-height: 1.4;
+}
+
+.gradient-text-small {
+    font-size: 36px;
+    background: linear-gradient(45deg, var(--color-light-gray), #CCC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3.6px;
+}
+
+.catchphrase-subtitle {
+    position: relative;
+    margin: var(--spacing-xl) auto 0;
+    width: 534px;
+    height: 58px;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-section-title);
+    background: linear-gradient(91deg, #DCC090 5.33%, #99855E 98.96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 4.8px;
+    line-height: 44px;
+}

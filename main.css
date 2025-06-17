@@ -1,0 +1,49 @@
+/* メインCSSファイル - リファクタリング版 */
+
+/* 変数定義 */
+@import 'css/variables.css';
+
+/* 基本スタイル */
+@import 'css/base.css';
+
+/* コンポーネント */
+@import 'css/components.css';
+
+/* ヒーローセクション */
+@import 'css/hero.css';
+
+/* セクション */
+@import 'css/sections.css';
+
+/* 特徴 */
+@import 'css/features.css';
+
+/* ボタン */
+@import 'css/buttons.css';
+
+/* 実績 */
+@import 'css/achievement.css';
+
+/* お客様の声 */
+@import 'css/reviews.css';
+
+/* 実績詳細 */
+@import 'css/achievement-details.css';
+
+/* よくある質問 */
+@import 'css/faq.css';
+
+/* 最終CTA */
+@import 'css/final-cta.css';
+
+/* フッター */
+@import 'css/footer.css';
+
+/* モバイル対応 */
+@import 'css/mobile.css';
+
+/* レスポンシブ */
+@import 'responsive.css';
+
+/* アニメーション */
+@import 'animations.css';

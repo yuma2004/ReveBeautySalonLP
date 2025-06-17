@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rêve Beauty Salon - メンズ脱毛サロン</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="img/placeholder-images.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +13,7 @@
 </head>
 <body>
     <!-- 準備中表示（デスクトップ以外） -->
+    <!-- モバイル準備中メッセージ -->
     <div class="mobile-coming-soon">
         <div class="coming-soon-content">
             <h1>準備中です</h1>
@@ -22,18 +21,19 @@
         </div>
     </div>
     
-    <div class="main-container" data-name="全体B">
+    <!-- メインコンテナ -->
+    <main class="main-container" data-name="全体B">
         <!-- ヒーローセクション -->
-        <section class="hero-section">
-            <div class="hero-background"></div>
-            <div class="hero-image"></div>
-            <div class="hero-gradient-overlay"></div>
+        <section class="hero-section" aria-label="メインビジュアル">
+            <div class="hero-background" aria-hidden="true"></div>
+            <div class="hero-image" aria-hidden="true"></div>
+            <div class="hero-gradient-overlay" aria-hidden="true"></div>
             
-            <div class="hero-content">
+            <header class="hero-content">
                 <h1 class="hero-title-line1">口コミだけで5年連続大阪No.1</h1>
-                <div class="hero-divider hero-divider-1"></div>
+                <div class="hero-divider hero-divider-1" aria-hidden="true"></div>
                 <h2 class="hero-title-line2">質の高いメンズ脱毛で</h2>
-                <div class="hero-divider hero-divider-2"></div>
+                <div class="hero-divider hero-divider-2" aria-hidden="true"></div>
                 
                 <div class="hero-main-title">
                     <span class="hero-main-title-line1">自信を手に</span>
@@ -45,16 +45,16 @@
                     完全紹介制で実現した効果を<br>
                     あなたも体験してみませんか？
                 </p>
-            </div>
+            </header>
             
-            <div class="hero-cta-button">
-                <div class="button-background"></div>
+            <a href="#contact" class="hero-cta-button" role="button" aria-label="無料カウンセリングを申し込む">
+                <div class="button-background" aria-hidden="true"></div>
                 <div class="button-content">
                     <span class="button-text">無料カウンセリング</span>
                     <span class="button-text-small">を</span>
                     <span class="button-text">申し込む</span>
                 </div>
-                <div class="arrow-icon">
+                <div class="arrow-icon" aria-hidden="true">
                     <svg viewBox="0 0 45 32" fill="none">
                         <g>
                             <path d="M29.0021 32C20.1798 32 13.0042 24.8234 13.0042 16C13.0042 7.17656 20.1798 0 29.0021 0C37.8244 0 45 7.17656 45 16C45 24.8234 37.8244 32 29.0021 32ZM29.0021 2.03822C21.3047 2.03822 15.0421 8.30166 15.0421 16C15.0421 23.6983 21.3047 29.9618 29.0021 29.9618C36.6994 29.9618 42.9621 23.6983 42.9621 16C42.9621 8.30166 36.6994 2.03822 29.0021 2.03822Z" fill="black"/>
@@ -62,12 +62,12 @@
                         </g>
                     </svg>
                 </div>
-            </div>
+            </a>
         </section>
 
         <!-- メインコンテンツセクション -->
-        <section class="main-content">
-            <div class="content-background"></div>
+        <section class="main-content" aria-label="サービス内容">
+            <div class="content-background" aria-hidden="true"></div>
             
             <!-- キャッチコピー -->
             <div class="catchphrase-section">
@@ -77,66 +77,66 @@
             </div>
 
             <!-- 特徴セクション -->
-            <div class="features-section">
-                <!-- 特徴01 -->
-                <div class="feature-item">
+            <section class="features-section" aria-label="サービスの特徴">
+                <!-- 特徴01: 都度払い制 -->
+                <article class="feature-item">
                     <div class="feature-content">
-                        <div class="feature-background"></div>
-                        <div class="feature-number-bg"></div>
-                        <div class="feature-label">特徴</div>
-                        <div class="feature-number">01</div>
-                        <div class="feature-title">都度払い制で安心</div>
-                        <div class="feature-description">お財布にも優しく、気軽に試せます</div>
+                        <div class="feature-background" aria-hidden="true"></div>
+                        <div class="feature-number-bg" aria-hidden="true"></div>
+                        <span class="feature-label">特徴</span>
+                        <span class="feature-number">01</span>
+                        <h3 class="feature-title">都度払い制で安心</h3>
+                        <p class="feature-description">お財布にも優しく、気軽に試せます</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- 特徴02 -->
-                <div class="feature-item">
+                <!-- 特徴02: エステティック認定機器 -->
+                <article class="feature-item">
                     <div class="feature-content">
-                        <div class="feature-background"></div>
-                        <div class="feature-number-bg"></div>
-                        <div class="feature-label">特徴</div>
-                        <div class="feature-number">02</div>
-                        <div class="feature-title">高品質なエステティック認定機器使用</div>
-                        <div class="feature-description">安全性と効果を最重視した純国産の認定マシン</div>
+                        <div class="feature-background" aria-hidden="true"></div>
+                        <div class="feature-number-bg" aria-hidden="true"></div>
+                        <span class="feature-label">特徴</span>
+                        <span class="feature-number">02</span>
+                        <h3 class="feature-title">高品質なエステティック認定機器使用</h3>
+                        <p class="feature-description">安全性と効果を最重視した純国産の認定マシン</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- 特徴03 -->
-                <div class="feature-item">
+                <!-- 特徴03: オーダーメイド脱毛 -->
+                <article class="feature-item">
                     <div class="feature-content">
-                        <div class="feature-background"></div>
-                        <div class="feature-number-bg"></div>
-                        <div class="feature-label">特徴</div>
-                        <div class="feature-number">03</div>
-                        <div class="feature-title">オーダーメイド脱毛</div>
-                        <div class="feature-description">あなたの肌質に合わせた最適な施術</div>
+                        <div class="feature-background" aria-hidden="true"></div>
+                        <div class="feature-number-bg" aria-hidden="true"></div>
+                        <span class="feature-label">特徴</span>
+                        <span class="feature-number">03</span>
+                        <h3 class="feature-title">オーダーメイド脱毛</h3>
+                        <p class="feature-description">あなたの肌質に合わせた最適な施術</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- 特徴04 -->
-                <div class="feature-item">
+                <!-- 特徴04: 施術内容の幅広さ -->
+                <article class="feature-item">
                     <div class="feature-content">
-                        <div class="feature-background"></div>
-                        <div class="feature-number-bg"></div>
-                        <div class="feature-label">特徴</div>
-                        <div class="feature-number">04</div>
-                        <div class="feature-title">施術内容の幅広さ</div>
-                        <div class="feature-description">脱毛に加えて、エステ、眉毛ケア、整体なども同時施術可能</div>
+                        <div class="feature-background" aria-hidden="true"></div>
+                        <div class="feature-number-bg" aria-hidden="true"></div>
+                        <span class="feature-label">特徴</span>
+                        <span class="feature-number">04</span>
+                        <h3 class="feature-title">施術内容の幅広さ</h3>
+                        <p class="feature-description">脱毛に加えて、エステ、眉毛ケア、整体なども同時施術可能</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- 特徴05 -->
-                <div class="feature-item">
+                <!-- 特徴05: 美容のサードプレイス -->
+                <article class="feature-item">
                     <div class="feature-content">
-                        <div class="feature-background"></div>
-                        <div class="feature-number-bg"></div>
-                        <div class="feature-label">特徴</div>
-                        <div class="feature-number">05</div>
-                        <div class="feature-title">「美容のサードプレイス」</div>
-                        <div class="feature-description">施術だけでなく、リラックスできるコミュニティも提供</div>
+                        <div class="feature-background" aria-hidden="true"></div>
+                        <div class="feature-number-bg" aria-hidden="true"></div>
+                        <span class="feature-label">特徴</span>
+                        <span class="feature-number">05</span>
+                        <h3 class="feature-title">「美容のサードプレイス」</h3>
+                        <p class="feature-description">施術だけでなく、リラックスできるコミュニティも提供</p>
                     </div>
-                </div>
+                </article>
             </div>
 
             <!-- CTAボタン -->
@@ -313,9 +313,9 @@
             </div>
 
             <!-- 最終CTAセクション -->
-            <div class="final-cta-section">
-                <div class="final-cta-overlay"></div>
-                <div class="salon-images"></div>
+            <section class="final-cta-section">
+                <div class="final-cta-overlay" aria-hidden="true"></div>
+                <div class="salon-images" aria-hidden="true"></div>
                 
                 <div class="final-cta-content">
                     <h2 class="final-cta-title">
@@ -328,23 +328,23 @@
                         初めての方でも<br>
                         安心してご相談いただけます。
                     </p>
+                    
+                    <a href="#contact" class="cta-button final-cta-button" role="button" aria-label="LINEで無料カウンセリングを申し込む">
+                        <div class="button-background" aria-hidden="true"></div>
+                        <div class="button-content">
+                            <span class="button-text">LINEで無料カウンセリングを申し込む</span>
+                        </div>
+                        <div class="arrow-icon" aria-hidden="true">
+                            <svg viewBox="0 0 45 32" fill="none">
+                                <g>
+                                    <path d="M29.0021 32C20.1798 32 13.0042 24.8234 13.0042 16C13.0042 7.17656 20.1798 0 29.0021 0C37.8244 0 45 7.17656 45 16C45 24.8234 37.8244 32 29.0021 32ZM29.0021 2.03822C21.3047 2.03822 15.0421 8.30166 15.0421 16C15.0421 23.6983 21.3047 29.9618 29.0021 29.9618C36.6994 29.9618 42.9621 23.6983 42.9621 16C42.9621 8.30166 36.6994 2.03822 29.0021 2.03822Z" fill="black"/>
+                                    <path d="M27.8425 11.4711L26.5056 13.0079L28.7718 14.9789H0V17.0171H28.8187L26.4974 19.0818L27.8527 20.6043L33.0393 15.9898L27.8425 11.4711Z" fill="black"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
                 </div>
-                
-                <div class="cta-button final-cta-button">
-                    <div class="button-background"></div>
-                    <div class="button-content">
-                        <span class="button-text">LINEで無料カウンセリングを申し込む</span>
-                    </div>
-                    <div class="arrow-icon">
-                        <svg viewBox="0 0 45 32" fill="none">
-                            <g>
-                                <path d="M29.0021 32C20.1798 32 13.0042 24.8234 13.0042 16C13.0042 7.17656 20.1798 0 29.0021 0C37.8244 0 45 7.17656 45 16C45 24.8234 37.8244 32 29.0021 32ZM29.0021 2.03822C21.3047 2.03822 15.0421 8.30166 15.0421 16C15.0421 23.6983 21.3047 29.9618 29.0021 29.9618C36.6994 29.9618 42.9621 23.6983 42.9621 16C42.9621 8.30166 36.6994 2.03822 29.0021 2.03822Z" fill="black"/>
-                                <path d="M27.8425 11.4711L26.5056 13.0079L28.7718 14.9789H0V17.0171H28.8187L26.4974 19.0818L27.8527 20.6043L33.0393 15.9898L27.8425 11.4711Z" fill="black"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+            </section>
 
             <!-- フッター -->
             <footer class="footer">

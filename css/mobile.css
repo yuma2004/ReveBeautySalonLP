@@ -1,0 +1,33 @@
+/* 準備中表示（デスクトップ以外） */
+.mobile-coming-soon {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon-content {
+    text-align: center;
+    color: var(--color-white);
+    font-family: var(--font-family-primary);
+}
+
+.coming-soon-content h1 {
+    font-size: var(--font-size-section-title);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.coming-soon-content p {
+    font-size: var(--font-size-button-small);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: 1px;
+    opacity: 0.8;
+}

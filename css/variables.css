@@ -1,0 +1,54 @@
+/* CSS変数定義 */
+:root {
+    /* カラーパレット */
+    --color-primary: #c4b095;
+    --color-secondary: #af986b;
+    --color-accent: #eecb87;
+    --color-dark: #1c1c1c;
+    --color-dark-secondary: #2a2a2a;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-light-gray: #EEE;
+    --color-gray: #DDD;
+    
+    /* グラデーション */
+    --gradient-primary: linear-gradient(90deg, var(--color-secondary), var(--color-accent) 50%, var(--color-secondary));
+    --gradient-hero: linear-gradient(135deg, var(--color-dark), var(--color-dark-secondary));
+    --gradient-overlay: linear-gradient(to bottom, transparent, var(--color-dark));
+    --gradient-divider: linear-gradient(90deg, var(--color-primary), transparent);
+    
+    /* タイポグラフィ */
+    --font-family-primary: 'Noto Serif JP', serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* フォントサイズ */
+    --font-size-hero-main: clamp(48px, 7vw, 96px);
+    --font-size-hero-title: clamp(24px, 3vw, 40px);
+    --font-size-hero-description: clamp(18px, 2.3vw, 32px);
+    --font-size-button: 32px;
+    --font-size-button-small: 24px;
+    --font-size-section-title: 48px;
+    --font-size-loading: 18px;
+    
+    /* スペーシング */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    
+    /* ボーダーと影 */
+    --border-radius-sm: 6px;
+    --border-radius-full: 50%;
+    --box-shadow-button: 0px 4px 6px 4px rgba(255, 255, 255, 0.2);
+    
+    /* z-index */
+    --z-index-preloader: 9999;
+    --z-index-cursor: 9998;
+    --z-index-hero-content: 10;
+}
