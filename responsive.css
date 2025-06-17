@@ -1,0 +1,346 @@
+/* ================================
+   レスポンシブデザイン CSS
+   ================================ */
+
+/* デスクトップ最適化 */
+@media (min-width: 1024px) {
+    /* 実績セクションの交互配置を確実に適用 */
+    .achievement-point {
+        display: flex !important;
+        align-items: center !important;
+        text-align: left !important;
+    }
+    
+    .achievement-point.left-image {
+        flex-direction: row !important;
+    }
+    
+    .achievement-point.right-image {
+        flex-direction: row !important;
+    }
+    
+    .achievement-point.right-image .point-content {
+        text-align: left !important;
+    }
+    
+    .final-cta-section {
+        height: clamp(600px, 70vh, 900px);
+        padding: 0 5vw;
+    }
+    
+    .final-cta-content {
+        padding: clamp(80px, 10vh, 150px) 0 0;
+        max-width: 1000px;
+    }
+    
+    .final-cta-title {
+        font-size: clamp(36px, 3.5vw, 64px);
+        margin-bottom: clamp(30px, 4.5vh, 60px);
+        letter-spacing: 0.02em;
+    }
+    
+    .final-cta-description {
+        font-size: clamp(20px, 2.2vw, 32px);
+        margin-bottom: clamp(50px, 7vh, 100px);
+        letter-spacing: 0.01em;
+    }
+    
+    .footer {
+        padding: clamp(60px, 5vh, 100px) 5vw;
+    }
+    
+    .footer-content {
+        max-width: 1600px;
+        gap: clamp(80px, 8vw, 200px);
+    }
+    
+    .footer-info {
+        gap: clamp(100px, 10vw, 250px);
+    }
+    
+    .footer-section-title {
+        font-size: clamp(18px, 1.4vw, 26px);
+        margin-bottom: clamp(25px, 2.2vh, 40px);
+    }
+    
+    .footer-links li {
+        font-size: clamp(16px, 1.3vw, 20px);
+        margin-bottom: clamp(18px, 3vh, 30px);
+    }
+    
+    .footer-map {
+        width: clamp(350px, 35vw, 600px);
+        height: clamp(280px, 35vh, 480px);
+        border-radius: 12px;
+    }
+    
+    .map-placeholder {
+        font-size: clamp(18px, 2vw, 28px);
+    }
+    
+    .footer-bottom {
+        margin-top: clamp(50px, 4vh, 80px);
+        padding-top: clamp(30px, 2.5vh, 50px);
+    }
+    
+    .footer-legal {
+        font-size: clamp(14px, 1.2vw, 18px);
+    }
+}
+
+/* タブレット・大画面での調整 */
+@media (max-width: 1400px) {
+    .content-background,
+    .hero-background {
+        width: 100%;
+    }
+    
+    .hero-image {
+        width: 90%;
+        left: 5%;
+    }
+    
+    .feature-content {
+        width: 90%;
+        max-width: 760px;
+    }
+    
+    .cta-button {
+        width: 90%;
+        max-width: 760px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* タブレット */
+@media (max-width: 768px) {
+    .catchphrase-section {
+        padding: 3vh 3vw;
+    }
+    
+    .features-section,
+    .achievement-section,
+    .achievement-details,
+    .faq-section {
+        padding: 0 3vw;
+    }
+    
+    .final-cta-section {
+        padding: 0 3vw;
+    }
+    
+    .final-cta-content {
+        padding: 5vh 0 0;
+    }
+    
+    .footer {
+        padding: clamp(40px, 3.4vh, 60px) 3vw;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 3vh;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 3vh;
+    }
+    
+    .achievement-point {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .achievement-point.right-image .point-content {
+        text-align: center;
+    }
+    
+    .point-image {
+        width: 100%;
+        max-width: 420px;
+    }
+}
+
+/* モバイルサイズ（デスクトップ以外では準備中画面を表示） */
+@media (max-width: 1023px) {
+    .mobile-coming-soon {
+        display: flex;
+    }
+    
+    .main-container {
+        display: none;
+    }
+}
+
+/* レスポンシブ対応のアニメーション調整 */
+@media (max-width: 768px) {
+    /* アニメーション速度を調整 */
+    :root {
+        --animation-duration: 0.4s;
+        --animation-delay: 0.05s;
+    }
+    
+    /* ホバーエフェクトをタッチデバイスで無効化 */
+    .feature-item:hover,
+    .review-item:hover,
+    .faq-item:hover {
+        transform: none;
+        filter: none;
+        box-shadow: initial;
+        background-color: initial;
+    }
+    
+    /* CTAボタンのホバーエフェクト調整 */
+    .cta-button:hover,
+    .hero-cta-button:hover {
+        transform: translateX(-50%);
+        box-shadow: 0px 4px 6px 4px rgba(255, 255, 255, 0.2);
+        animation: none;
+    }
+}
+
+/* 超小画面での調整 */
+@media (max-width: 480px) {
+    .hero-title-line1,
+    .hero-title-line2 {
+        font-size: clamp(18px, 4vw, 24px);
+    }
+    
+    .hero-main-title-line1,
+    .hero-main-title-line2 {
+        font-size: clamp(32px, 8vw, 48px);
+    }
+    
+    .hero-description {
+        font-size: clamp(14px, 3vw, 18px);
+    }
+    
+    .gradient-text {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+    
+    .feature-title {
+        font-size: clamp(14px, 3.5vw, 16px);
+    }
+    
+    .feature-description {
+        font-size: clamp(12px, 3vw, 14px);
+    }
+    
+    .button-text {
+        font-size: clamp(20px, 5vw, 24px);
+    }
+    
+    .button-text-small {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+}
+
+/* 横向きタブレット */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .hero-section {
+        height: 100vh;
+    }
+    
+    .final-cta-section {
+        height: clamp(400px, 60vh, 600px);
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        gap: clamp(40px, 6vw, 80px);
+    }
+    
+    .footer-info {
+        flex-direction: row;
+        gap: clamp(60px, 8vw, 120px);
+    }
+}
+
+/* 高解像度ディスプレイ対応 */
+@media (min-width: 1400px) {
+    .hero-title-line1,
+    .hero-title-line2 {
+        font-size: 40px;
+    }
+    
+    .hero-main-title-line1,
+    .hero-main-title-line2 {
+        font-size: 96px;
+    }
+    
+    .hero-description {
+        font-size: 32px;
+    }
+    
+    .gradient-text {
+        font-size: 48px;
+    }
+    
+    .feature-title {
+        font-size: 24px;
+    }
+    
+    .feature-description {
+        font-size: 18px;
+    }
+    
+    .button-text {
+        font-size: 32px;
+    }
+    
+    .achievement-title,
+    .achievement-details-title {
+        font-size: 48px;
+    }
+}
+
+/* プリント用メディアクエリ */
+@media print {
+    .preloader,
+    .custom-cursor,
+    .mobile-coming-soon {
+        display: none !important;
+    }
+    
+    .main-container {
+        display: block !important;
+    }
+    
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .hero-background,
+    .content-background,
+    .final-cta-overlay,
+    .salon-images {
+        display: none !important;
+    }
+}
+
+/* 縮小表示対応 */
+@media (max-width: 320px) {
+    .hero-cta-button,
+    .cta-button {
+        width: 95%;
+        min-width: 280px;
+    }
+    
+    .feature-content {
+        width: 95%;
+    }
+    
+    .review-item,
+    .faq-item {
+        width: 95%;
+    }
+    
+    .achievement-point {
+        gap: 15px;
+    }
+}

@@ -5,13 +5,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --animation-duration: 0.6s;
-    --animation-delay: 0.1s;
-    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
-    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
 body {
     font-family: 'Noto Serif JP', serif;
     background-color: #ffffff;
@@ -32,12 +25,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.preloader.fade-out {
-    opacity: 0;
-    visibility: hidden;
 }
 
 .preloader-content {
@@ -51,14 +38,12 @@ body {
     border: 3px solid rgba(196, 176, 149, 0.3);
     border-top: 3px solid #c4b095;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
     margin: 0 auto 20px;
 }
 
 .loading-text {
     font-size: 18px;
     letter-spacing: 2px;
-    animation: pulse 2s ease-in-out infinite;
 }
 
 /* カスタムカーソル */
@@ -70,239 +55,11 @@ body {
     border-radius: 50%;
     pointer-events: none;
     z-index: 9998;
-    transition: transform 0.1s ease;
     opacity: 0.7;
 }
 
 .custom-cursor.clicking {
-    transform: scale(0.8);
     background-color: rgba(196, 176, 149, 0.3);
-}
-
-/* 基本アニメーション */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.3);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    70% {
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes expandWidth {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes expandDivider {
-    from {
-        width: 0;
-    }
-    to {
-        width: 28vw;
-    }
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-/* アニメーションクラス */
-.animate-in {
-    animation: fadeIn var(--animation-duration) var(--ease-out-expo) forwards;
-}
-
-.animate-slide-in-left {
-    animation: slideInLeft 0.6s var(--ease-out-expo) forwards;
-}
-
-.animate-slide-in-right {
-    animation: slideInRight 0.6s var(--ease-out-expo) forwards;
-}
-
-.animate-zoom-in {
-    animation: zoomIn 0.6s var(--ease-out-expo) forwards;
-}
-
-.animate-fade-in-up {
-    animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
-}
-
-.animate-bounce-in {
-    animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
-}
-
-.animate-expand {
-    animation: expandWidth 0.6s var(--ease-out-expo) forwards;
-}
-
-.animate-expand-divider {
-    animation: expandDivider 0.6s var(--ease-out-expo) forwards;
-}
-
-/* ホバーエフェクト */
-.hover-effect {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0px 8px 15px rgba(196, 176, 149, 0.4) !important;
-}
-
-.hover-lift {
-    transform: translateY(-5px);
-    transition: all 0.3s var(--ease-out-expo);
-}
-
-.hover-glow {
-    box-shadow: 0 0 20px rgba(196, 176, 149, 0.3);
-    transition: all 0.3s ease;
-}
-
-/* 初期状態（アニメーション前） */
-.hero-title-line1,
-.hero-title-line2,
-.hero-main-title,
-.hero-description,
-.hero-cta-button {
-    opacity: 0;
-}
-
-.hero-divider-1,
-.hero-divider-2 {
-    width: 0;
-}
-
-.catchphrase-section,
-.feature-item,
-.achievement-section,
-.review-item,
-.achievement-details,
-.achievement-point,
-.faq-section,
-.final-cta-section {
-    opacity: 0;
-}
-
-/* CTAボタンは個別に処理するため除外 */
-.cta-button {
-    opacity: 1;
-    transform: translateX(-50%);
-}
-
-/* FAQアイテムは個別にアニメーションするため除外 */
-.faq-item {
-    opacity: 1;
-    transform: none;
-}
-
-/* 読み込み完了時の調整 */
-body.loaded .hero-title-line1,
-body.loaded .hero-title-line2,
-body.loaded .hero-main-title,
-body.loaded .hero-description,
-body.loaded .hero-cta-button {
-    opacity: 1;
 }
 
 /* メインコンテナ */
@@ -447,13 +204,6 @@ body.loaded .hero-cta-button {
     border-radius: 6px;
     box-shadow: 0px 4px 6px 4px rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.hero-cta-button:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0px 6px 8px 4px rgba(255, 255, 255, 0.3);
-    animation: float 2s ease-in-out infinite;
 }
 
 /* メインコンテンツ */
@@ -540,12 +290,6 @@ body.loaded .hero-cta-button {
 .feature-item {
     position: relative;
     margin-bottom: 3.5vh;
-    transition: all 0.3s var(--ease-out-expo);
-}
-
-.feature-item:hover {
-    transform: translateY(-5px);
-    filter: brightness(1.1);
 }
 
 .feature-content {
@@ -650,17 +394,7 @@ body.loaded .hero-cta-button {
     border-radius: 0;
     box-shadow: 0px 4px 6px 4px rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    transition: all 0.3s ease;
     margin: 60px 0;
-}
-
-.cta-button:hover {
-    transform: translateX(-50%) translateY(-2px) scale(1.02);
-    box-shadow: 0px 6px 8px 4px rgba(255, 255, 255, 0.3);
-}
-
-.cta-button.animate-in {
-    animation: ctaFadeIn var(--animation-duration) var(--ease-out-expo) forwards;
 }
 
 .button-background {
@@ -846,12 +580,6 @@ body.loaded .hero-cta-button {
     margin: 0 auto 3.6vh;
     background-color: #ffffff;
     box-shadow: 0px 4px 4px 0px rgba(191, 164, 111, 0.5);
-    transition: all 0.3s var(--ease-out-expo);
-}
-
-.review-item:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0px 8px 12px 0px rgba(191, 164, 111, 0.7);
 }
 
 .review-bg {
@@ -996,12 +724,6 @@ body.loaded .hero-cta-button {
     text-align: center;
 }
 
-/* FAQセクションの初期状態を確保 */
-.faq-section.animate-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .faq-title {
     position: relative;
     margin: 0 auto 3.6vh;
@@ -1022,13 +744,6 @@ body.loaded .hero-cta-button {
     height: clamp(160px, 18vh, 250px);
     margin: 0 auto 3.6vh;
     background-color: #ffffff;
-    transition: all 0.3s var(--ease-out-expo);
-}
-
-.faq-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(196, 176, 149, 0.3);
-    background-color: #fafafa;
 }
 
 .faq-item:nth-child(2) {
@@ -1197,23 +912,12 @@ body.loaded .hero-cta-button {
     letter-spacing: clamp(1px, 0.1vw, 1.6px);
     line-height: 1.4;
     margin-bottom: clamp(15px, 2.5vh, 25px);
-    transition: color 0.3s ease;
-}
-
-.footer-links li:hover {
-    color: #c4b095;
 }
 
 .footer-links a {
     color: inherit;
     text-decoration: none;
-    transition: all 0.3s ease;
     border-bottom: 1px solid transparent;
-}
-
-.footer-links a:hover {
-    color: #c4b095;
-    border-bottom-color: #c4b095;
 }
 
 .footer-map {
@@ -1260,190 +964,12 @@ body.loaded .hero-cta-button {
 .footer-legal a {
     color: #e8e8e8;
     text-decoration: none;
-    transition: all 0.3s ease;
     border-bottom: 1px solid transparent;
-}
-
-.footer-legal a:hover {
-    color: #c4b095;
-    border-bottom-color: #c4b095;
 }
 
 .footer-divider {
     margin: 0 clamp(10px, 1.2vw, 20px);
     color: #666666;
-}
-
-/* デスクトップ最適化 */
-@media (min-width: 1024px) {
-    /* 実績セクションの交互配置を確実に適用 */
-    .achievement-point {
-        display: flex !important;
-        align-items: center !important;
-        text-align: left !important;
-    }
-    
-    .achievement-point.left-image {
-        flex-direction: row !important;
-    }
-    
-    .achievement-point.right-image {
-        flex-direction: row !important;
-    }
-    
-    .achievement-point.right-image .point-content {
-        text-align: left !important;
-    }
-    
-    .final-cta-section {
-        height: clamp(600px, 70vh, 900px);
-        padding: 0 5vw;
-    }
-    
-    .final-cta-content {
-        padding: clamp(80px, 10vh, 150px) 0 0;
-        max-width: 1000px;
-    }
-    
-    .final-cta-title {
-        font-size: clamp(36px, 3.5vw, 64px);
-        margin-bottom: clamp(30px, 4.5vh, 60px);
-        letter-spacing: 0.02em;
-    }
-    
-    .final-cta-description {
-        font-size: clamp(20px, 2.2vw, 32px);
-        margin-bottom: clamp(50px, 7vh, 100px);
-        letter-spacing: 0.01em;
-    }
-    
-    .footer {
-        padding: clamp(60px, 5vh, 100px) 5vw;
-    }
-    
-    .footer-content {
-        max-width: 1600px;
-        gap: clamp(80px, 8vw, 200px);
-    }
-    
-    .footer-info {
-        gap: clamp(100px, 10vw, 250px);
-    }
-    
-    .footer-section-title {
-        font-size: clamp(18px, 1.4vw, 26px);
-        margin-bottom: clamp(25px, 2.2vh, 40px);
-    }
-    
-    .footer-links li {
-        font-size: clamp(16px, 1.3vw, 20px);
-        margin-bottom: clamp(18px, 3vh, 30px);
-    }
-    
-    .footer-map {
-        width: clamp(350px, 35vw, 600px);
-        height: clamp(280px, 35vh, 480px);
-        border-radius: 12px;
-    }
-    
-    .map-placeholder {
-        font-size: clamp(18px, 2vw, 28px);
-    }
-    
-    .footer-bottom {
-        margin-top: clamp(50px, 4vh, 80px);
-        padding-top: clamp(30px, 2.5vh, 50px);
-    }
-    
-    .footer-legal {
-        font-size: clamp(14px, 1.2vw, 18px);
-    }
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 1400px) {
-    .content-background,
-    .hero-background {
-        width: 100%;
-    }
-    
-    .hero-image {
-        width: 90%;
-        left: 5%;
-    }
-    
-    .feature-content {
-        width: 90%;
-        max-width: 760px;
-    }
-    
-    .cta-button {
-        width: 90%;
-        max-width: 760px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-@media (max-width: 768px) {
-    .catchphrase-section {
-        padding: 3vh 3vw;
-    }
-    
-    .features-section,
-    .achievement-section,
-    .achievement-details,
-    .faq-section {
-        padding: 0 3vw;
-    }
-    
-    .final-cta-section {
-        padding: 0 3vw;
-    }
-    
-    .final-cta-content {
-        padding: 5vh 0 0;
-    }
-    
-    .footer {
-        padding: clamp(40px, 3.4vh, 60px) 3vw;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 3vh;
-    }
-    
-    .footer-info {
-        flex-direction: column;
-        gap: 3vh;
-    }
-    
-    .achievement-point {
-        flex-direction: column !important;
-        text-align: center;
-    }
-    
-    .achievement-point.right-image .point-content {
-        text-align: center;
-    }
-    
-    .point-image {
-        width: 100%;
-        max-width: 420px;
-    }
-}
-
-/* キーフレーム追加 */
-@keyframes ctaFadeIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
 }
 
 /* 準備中表示（デスクトップ以外） */
@@ -1478,15 +1004,4 @@ body.loaded .hero-cta-button {
     font-weight: 400;
     letter-spacing: 1px;
     opacity: 0.8;
-}
-
-/* デスクトップ以外では準備中画面を表示 */
-@media (max-width: 1023px) {
-    .mobile-coming-soon {
-        display: flex;
-    }
-    
-    .main-container {
-        display: none;
-    }
 } 

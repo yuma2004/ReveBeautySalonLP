@@ -1,0 +1,415 @@
+/* ================================
+   アニメーション CSS
+   ================================ */
+
+/* CSS変数（アニメーション関連） */
+:root {
+    --animation-duration: 0.6s;
+    --animation-delay: 0.1s;
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 基本アニメーション */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes expandDivider {
+    from {
+        width: 0;
+    }
+    to {
+        width: 28vw;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes ctaFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* アニメーションクラス */
+.animate-in {
+    animation: fadeIn var(--animation-duration) var(--ease-out-expo) forwards;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-zoom-in {
+    animation: zoomIn 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-bounce-in {
+    animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-expand {
+    animation: expandWidth 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-expand-divider {
+    animation: expandDivider 0.6s var(--ease-out-expo) forwards;
+}
+
+/* ホバーエフェクト */
+.hover-effect {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0px 8px 15px rgba(196, 176, 149, 0.4) !important;
+}
+
+.hover-lift {
+    transform: translateY(-5px);
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.hover-glow {
+    box-shadow: 0 0 20px rgba(196, 176, 149, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* 初期状態（アニメーション前） */
+.hero-title-line1,
+.hero-title-line2,
+.hero-main-title,
+.hero-description,
+.hero-cta-button {
+    opacity: 0;
+}
+
+.hero-divider-1,
+.hero-divider-2 {
+    width: 0;
+}
+
+.catchphrase-section,
+.feature-item,
+.achievement-section,
+.review-item,
+.achievement-details,
+.achievement-point,
+.faq-section,
+.final-cta-section {
+    opacity: 0;
+}
+
+/* CTAボタンは個別に処理するため除外 */
+.cta-button {
+    opacity: 1;
+    transform: translateX(-50%);
+}
+
+/* FAQアイテムは個別にアニメーションするため除外 */
+.faq-item {
+    opacity: 1;
+    transform: none;
+}
+
+/* 読み込み完了時の調整 */
+body.loaded .hero-title-line1,
+body.loaded .hero-title-line2,
+body.loaded .hero-main-title,
+body.loaded .hero-description,
+body.loaded .hero-cta-button {
+    opacity: 1;
+}
+
+/* FAQセクションの初期状態を確保 */
+.faq-section.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* プリローダーアニメーション */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* プリローダーのフェードアウト */
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* カスタムカーソルアニメーション */
+.custom-cursor {
+    transition: transform 0.1s ease;
+}
+
+.custom-cursor.clicking {
+    transform: scale(0.8);
+}
+
+/* 要素別のトランジション */
+.feature-item {
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.1);
+}
+
+.review-item {
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.review-item:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0px 8px 12px 0px rgba(191, 164, 111, 0.7);
+}
+
+.faq-item {
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(196, 176, 149, 0.3);
+    background-color: #fafafa;
+}
+
+.hero-cta-button {
+    transition: all 0.3s ease;
+}
+
+.hero-cta-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0px 6px 8px 4px rgba(255, 255, 255, 0.3);
+    animation: float 2s ease-in-out infinite;
+}
+
+.cta-button {
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateX(-50%) translateY(-2px) scale(1.02);
+    box-shadow: 0px 6px 8px 4px rgba(255, 255, 255, 0.3);
+}
+
+.cta-button.animate-in {
+    animation: ctaFadeIn var(--animation-duration) var(--ease-out-expo) forwards;
+}
+
+/* フッターリンクのアニメーション */
+.footer-links li {
+    transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+    color: #c4b095;
+}
+
+.footer-links a {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+    color: #c4b095;
+    border-bottom-color: #c4b095;
+}
+
+.footer-legal a {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-legal a:hover {
+    color: #c4b095;
+    border-bottom-color: #c4b095;
+}
+
+/* プリローダーのトランジション */
+.preloader {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* パフォーマンス最適化のためのwill-change */
+.animate-in,
+.animate-slide-in-left,
+.animate-slide-in-right,
+.animate-zoom-in,
+.animate-fade-in-up,
+.animate-bounce-in,
+.animate-expand,
+.animate-expand-divider {
+    will-change: transform, opacity;
+}
+
+.feature-item:hover,
+.review-item:hover,
+.faq-item:hover,
+.hero-cta-button:hover,
+.cta-button:hover {
+    will-change: transform, box-shadow;
+}
+
+/* 高フレームレート対応 */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-cta-button:hover {
+        animation: float 2s ease-in-out infinite;
+    }
+}
+
+/* アクセシビリティ: アニメーション無効化設定 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-cta-button:hover {
+        animation: none;
+    }
+    
+    .loading-spinner {
+        animation: none;
+    }
+    
+    .loading-text {
+        animation: none;
+    }
+}
